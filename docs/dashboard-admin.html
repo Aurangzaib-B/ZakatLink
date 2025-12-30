@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Dashboard - ZakatLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                🌙 ZakatLink
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>👤 Admin Dashboard</h1>
+                <p>Manage users, verify student profiles, and oversee platform operations.</p>
+            </div>
+
+            <!-- Statistics -->
+            <div class="grid grid-cols-3">
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: var(--emerald-primary); font-weight: 700;">234</div>
+                    <div style="color: var(--text-secondary); font-weight: 600;">Total Users</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: #f59e0b; font-weight: 700;">12</div>
+                    <div style="color: var(--text-secondary); font-weight: 600;">Pending Verifications</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 2.5rem; color: var(--emerald-primary); font-weight: 700;">56</div>
+                    <div style="color: var(--text-secondary); font-weight: 600;">Active Connections</div>
+                </div>
+            </div>
+
+            <!-- Users Table -->
+            <div class="card">
+                <h2 class="card-title">User Management</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                    Review and verify user accounts. Click "Verify" to approve student accounts.
+                </p>
+                
+                <div class="table-container">
+                    <table class="table" id="users-table">
+                        <thead>
+                            <tr>
+                                <th>Name</th>
+                                <th>Email</th>
+                                <th>Role</th>
+                                <th>University</th>
+                                <th>Status</th>
+                                <th>Join Date</th>
+                                <th>Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- Users will be loaded here by JavaScript -->
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Recent Activity -->
+            <div class="card">
+                <h2 class="card-title">Recent Activity</h2>
+                <div style="line-height: 2;">
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--gray-200);">
+                        <strong>Zainab Malik</strong> submitted a new Zakat request
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;"> - 2 hours ago</span>
+                    </div>
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--gray-200);">
+                        <strong>Sarah Khan</strong> connected with Ahmed Hassan
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;"> - 5 hours ago</span>
+                    </div>
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--gray-200);">
+                        <strong>Hassan Yusuf</strong> registered as a new student
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;"> - 1 day ago</span>
+                    </div>
+                    <div style="padding: 1rem; border-bottom: 1px solid var(--gray-200);">
+                        <strong>Mohammad Rahman</strong> donated to Fatima Ali
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;"> - 2 days ago</span>
+                    </div>
+                    <div style="padding: 1rem;">
+                        <strong>Omar Ibrahim</strong> completed his profile verification
+                        <span style="color: var(--text-secondary); font-size: 0.9rem;"> - 3 days ago</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Admin Actions -->
+            <div class="card" style="background-color: var(--emerald-light); border: 2px solid var(--emerald-primary);">
+                <h3 style="color: var(--emerald-dark); margin-bottom: 1rem;">⚠️ Admin Guidelines</h3>
+                <ul style="color: var(--emerald-dark); line-height: 2;">
+                    <li>Verify student documentation thoroughly before approval</li>
+                    <li>Check university enrollment status and student ID verification</li>
+                    <li>Review the legitimacy of Zakat requests and amounts</li>
+                    <li>Monitor platform activity for any suspicious behavior</li>
+                    <li>Approved students will be visible to donors immediately</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ZakatLink. Empowering students through Zakat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

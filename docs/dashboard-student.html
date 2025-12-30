@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Dashboard - ZakatLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                🌙 ZakatLink
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>🎓 Student Dashboard</h1>
+                <p>Welcome back! Manage your profile and Zakat requests here.</p>
+            </div>
+
+            <!-- Profile Status -->
+            <div class="card">
+                <h2 class="card-title">Profile Status</h2>
+                <div id="student-status">
+                    <span class="status-badge status-pending">⏳ Verification Pending</span>
+                </div>
+                <p class="mt-2" style="color: var(--text-secondary);">
+                    Your profile is currently under review by our admin team. You will be notified once your account is verified.
+                </p>
+            </div>
+
+            <!-- Request Zakat Form -->
+            <div class="card">
+                <h2 class="card-title">Request Zakat Assistance</h2>
+                <form onsubmit="submitZakatRequest(event)">
+                    <div class="form-group">
+                        <label class="form-label" for="university">University / Institution</label>
+                        <input 
+                            type="text" 
+                            id="university" 
+                            name="university" 
+                            class="form-input" 
+                            placeholder="Enter your university name"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="need">Type of Need</label>
+                        <select id="need" name="need" class="form-select" required>
+                            <option value="">Select type of need</option>
+                            <option value="Tuition Fee">Tuition Fee</option>
+                            <option value="Books & Materials">Books & Materials</option>
+                            <option value="Laptop & Software">Laptop & Software</option>
+                            <option value="Accommodation">Accommodation</option>
+                            <option value="Transportation">Transportation</option>
+                            <option value="Other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="amount">Amount Needed</label>
+                        <input 
+                            type="text" 
+                            id="amount" 
+                            name="amount" 
+                            class="form-input" 
+                            placeholder="e.g., $2,000"
+                            required
+                        >
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="description">Description</label>
+                        <textarea 
+                            id="description" 
+                            name="description" 
+                            class="form-textarea" 
+                            placeholder="Please provide details about your situation and why you need this assistance..."
+                            required
+                        ></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-success" style="width: 100%;">
+                        Submit Request
+                    </button>
+                </form>
+            </div>
+
+            <!-- Information Box -->
+            <div class="card" style="background-color: var(--emerald-light); border: 2px solid var(--emerald-primary);">
+                <h3 style="color: var(--emerald-dark); margin-bottom: 1rem;">📝 Important Information</h3>
+                <ul style="color: var(--emerald-dark); line-height: 2;">
+                    <li>Ensure all information provided is accurate and truthful</li>
+                    <li>You may be asked to provide supporting documentation</li>
+                    <li>Once verified, your profile will be visible to potential donors</li>
+                    <li>You will be notified when a donor connects with you</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ZakatLink. Empowering students through Zakat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
