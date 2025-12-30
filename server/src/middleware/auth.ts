@@ -22,7 +22,11 @@ export const authMiddleware = async (
       return;
     }
 
-    const decoded = jwt.verify(token, process.env.JWT_SECRET || 'default-secret') as {
+    if (!process.env.JWT_SECRET) {
+      throw new Error('JWT_SECRET is not defined in environment variables');
+    }
+
+    const decoded = jwt.verify(token, process.env.JWT_SECRET) as {
       id: string;
       email: string;
       role: string;

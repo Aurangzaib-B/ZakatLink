@@ -34,10 +34,14 @@ export class AuthController {
         isAnonymous: isAnonymous || false
       });
 
+      if (!process.env.JWT_SECRET) {
+        throw new Error('JWT_SECRET is not defined in environment variables');
+      }
+
       // Generate JWT token
       const token = jwt.sign(
         { id: user.id, email: user.email, role: user.role },
-        process.env.JWT_SECRET || 'default-secret',
+        process.env.JWT_SECRET,
         { expiresIn: process.env.JWT_EXPIRES_IN || '7d' } as jwt.SignOptions
       );
 
@@ -84,10 +88,14 @@ export class AuthController {
         return;
       }
 
+      if (!process.env.JWT_SECRET) {
+        throw new Error('JWT_SECRET is not defined in environment variables');
+      }
+
       // Generate JWT token
       const token = jwt.sign(
         { id: user.id, email: user.email, role: user.role },
-        process.env.JWT_SECRET || 'default-secret',
+        process.env.JWT_SECRET,
         { expiresIn: process.env.JWT_EXPIRES_IN || '7d' } as jwt.SignOptions
       );
 
