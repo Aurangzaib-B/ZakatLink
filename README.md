@@ -175,6 +175,18 @@ VITE_API_URL=http://localhost:5000/api
 - CORS configuration
 - Input validation
 - SQL injection prevention through Sequelize ORM
+- Secure environment variable handling (JWT_SECRET required)
+
+## Security Recommendations for Production
+
+For production deployments, consider adding:
+- **Rate Limiting**: Implement rate limiting on authentication endpoints to prevent brute force attacks (e.g., using express-rate-limit)
+- **Database Migrations**: Use Sequelize migrations instead of `sync()` for database schema management
+- **HTTPS**: Always use HTTPS in production
+- **Environment Variables**: Ensure all sensitive data is stored in environment variables
+- **Logging**: Implement comprehensive logging and monitoring
+- **Input Sanitization**: Add additional input validation and sanitization
+- **Security Headers**: Use helmet.js for security headers
 
 ## Contributing
 
