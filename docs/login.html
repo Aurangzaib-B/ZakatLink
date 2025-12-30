@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - ZakatLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                🌙 ZakatLink
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="login.html">Login</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Login Container -->
+    <div class="login-container">
+        <div class="login-box">
+            <h1 class="login-title">Welcome to ZakatLink</h1>
+            <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                Select your role to continue with the demo
+            </p>
+            
+            <div class="login-buttons">
+                <button class="btn btn-success login-btn" onclick="loginAs('student')">
+                    🎓 Login as Student
+                </button>
+                
+                <button class="btn btn-success login-btn" onclick="loginAs('donor')">
+                    💝 Login as Donor
+                </button>
+                
+                <button class="btn btn-success login-btn" onclick="loginAs('admin')">
+                    👤 Login as Admin
+                </button>
+            </div>
+            
+            <div style="margin-top: 2rem; text-align: center; color: var(--text-secondary); font-size: 0.9rem;">
+                <p>This is a demonstration prototype for GitHub Pages.</p>
+                <p>Click any button to explore different user dashboards.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ZakatLink. Empowering students through Zakat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

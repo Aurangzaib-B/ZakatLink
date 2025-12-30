@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard - ZakatLink</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <a href="index.html" class="navbar-logo">
+                🌙 ZakatLink
+            </a>
+            <ul class="navbar-nav">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="#" onclick="logout()">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Dashboard -->
+    <section class="dashboard">
+        <div class="container">
+            <!-- Dashboard Header -->
+            <div class="dashboard-header">
+                <h1>💝 Donor Dashboard</h1>
+                <p>Browse verified students and make a difference in their lives through Zakat donations.</p>
+            </div>
+
+            <!-- Students Grid -->
+            <div class="card">
+                <h2 class="card-title">Verified Students Seeking Assistance</h2>
+                <p style="color: var(--text-secondary); margin-bottom: 2rem;">
+                    All students below have been verified by our admin team. Click "Connect & Donate" to send a connection request.
+                </p>
+                
+                <div class="grid grid-cols-2" id="students-grid">
+                    <!-- Students will be loaded here by JavaScript -->
+                </div>
+            </div>
+
+            <!-- Information Box -->
+            <div class="card" style="background-color: var(--emerald-light); border: 2px solid var(--emerald-primary);">
+                <h3 style="color: var(--emerald-dark); margin-bottom: 1rem;">💡 Donation Guidelines</h3>
+                <ul style="color: var(--emerald-dark); line-height: 2;">
+                    <li>All students have been verified by our admin team for authenticity</li>
+                    <li>Clicking "Connect & Donate" will send your interest to the student</li>
+                    <li>You can donate anonymously if you prefer</li>
+                    <li>Direct communication will be established after connection approval</li>
+                    <li>Your generosity helps students achieve their educational dreams</li>
+                </ul>
+            </div>
+
+            <!-- Impact Stats -->
+            <div class="grid grid-cols-3">
+                <div class="card text-center">
+                    <div style="font-size: 3rem; color: var(--emerald-primary); font-weight: 700;">127</div>
+                    <div style="color: var(--text-secondary); font-weight: 600;">Students Helped</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 3rem; color: var(--emerald-primary); font-weight: 700;">$45K</div>
+                    <div style="color: var(--text-secondary); font-weight: 600;">Total Donations</div>
+                </div>
+                <div class="card text-center">
+                    <div style="font-size: 3rem; color: var(--emerald-primary); font-weight: 700;">89</div>
+                    <div style="color: var(--text-secondary); font-weight: 600;">Active Donors</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 ZakatLink. Empowering students through Zakat. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
